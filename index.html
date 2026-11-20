@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureSight AI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h1>🛡 SecureSight AI</h1>
+        <p id="lastUpdated">Last updated: Waiting for data...</p>
+        <nav>
+            <a class="active" href="#">Dashboard</a>
+            <a href="#devices">Devices</a>
+            <a href="#network">Network</a>
+            <a href="#alerts">Security Alerts</a>
+        </nav>
+        <p class="sidebar-footer">Secure AIOps Platform</p>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <div>
+                <h1>Monitoring Dashboard</h1>
+                <p>Real-time infrastructure overview</p>
+            </div>
+            <span class="status">● System Online</span>
+        </header>
+
+        <section class="summary">
+            <div class="card">
+                <p>Total Devices</p>
+                <h2 id="totalDevices">0</h2>
+            </div>
+            <div class="card">
+                <p>Healthy Devices</p>
+                <h2 id="healthyDevices">0</h2>
+            </div>
+            <div class="card">
+                <p>Warnings</p>
+                <h2 id="warningDevices">0</h2>
+            </div>
+            <div class="card">
+                <p>Critical Alerts</p>
+                <h2 id="criticalDevices">0</h2>
+            </div>
+        </section>
+
+        <section class="panel" id="devices">
+            <h2>Device Monitoring</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Device</th>
+                            <th>CPU</th>
+                            <th>Memory</th>
+                            <th>Disk</th>
+                            <th>Bandwidth</th>
+                            <th>Latency</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="deviceTable"></tbody>
+                </table>
+            </div>
+        </section>
+        <section class="panel" id="performance">
+            <h2>System Performance Overview</h2>
+        <p class="chart-description">
+         CPU and memory usage across monitored devices
+        </p>
+
+        <div id="performanceCharts" class="performance-grid"></div>
+        </section>
+
+        <section class="panel" id="network">
+            <h2>Network Overview</h2>
+            <div class="network-grid">
+                <div class="metric">
+                    <p>Average Latency</p>
+                    <h2 id="avgLatency">0 ms</h2>
+                </div>
+                <div class="metric">
+                    <p>Packet Loss</p>
+                    <h2 id="packetLoss">0%</h2>
+                </div>
+                <div class="metric">
+                    <p>Failed Logins</p>
+                    <h2 id="failedLogins">0</h2>
+                </div>
+            </div>
+        </section>
+        <section class="panel" id="ai-insights">
+            <h2>AI Anomaly Detection & Insights</h2>
+
+            <p class="chart-description">
+            Automated analysis of unusual system activity
+            </p>
+
+         <div id="aiInsights">
+            <p>Analyzing device telemetry...</p>
+        </div>
+        </section>
+
+        <section class="panel" id="alerts">
+            <h2>AI Security Alerts</h2>
+            <div id="alertList"></div>
+        </section>
+
+        <footer>SecureSight AI | Secure AIOps Observability</footer>
+    </main>
+    <!-- Device Details Section -->
+        <section class="panel" id="deviceDetails" style="display: none;">
+            <h2>Device Details</h2>
+
+        <div id="deviceDetailsContent">
+            <p>Select a device to view its details.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
