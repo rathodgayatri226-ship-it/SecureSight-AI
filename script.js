@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:5000";
+const API = "https://securesight-ai-k4td.onrender.com";
 
 // Main dashboard
 async function updateDashboard() {
